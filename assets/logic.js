@@ -1,0 +1,1 @@
+// Giphy API key: g1Can9EJuWv920hp8qsAkS5yv0CX99se

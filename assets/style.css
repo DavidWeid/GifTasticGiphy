@@ -1,0 +1,47 @@
+html,
+body {
+    height: 100%;
+    color: rgb(58, 82, 89);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(245, 235, 99);
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(58, 82, 89);
+    /* color: rgb(179, 152, 160); */
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+}
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.bg-lavender {
+    background-color: rgb(125, 156, 166);
+}
+
+.text-lavender {
+    color: rgb(242, 238, 170);
+}
+
+.text-lavender-muted {
+    color: rgb(192, 187, 125);
+    /* color: rgb(115, 112, 75); */
+    /* color: rgb(245, 235, 99); */
+    /* opacity: 0.70; */
+    font-weight: 300;
+}

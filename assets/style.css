@@ -39,9 +39,35 @@ footer p {
 }
 
 .text-lavender-muted {
-    color: rgb(192, 187, 125);
+    /* color: rgb(192, 187, 125); */
     /* color: rgb(115, 112, 75); */
     /* color: rgb(245, 235, 99); */
     /* opacity: 0.70; */
-    font-weight: 300;
+    color: rgb(58, 82, 89);
+    font-weight: 400;
+}
+
+.text-lavender-muted:hover {
+    /* color: rgb(192, 187, 125); */
+    color: white;
+}
+
+.bg-lavender-muted {
+    /* background-color: rgb(58, 82, 89); */
+    /* background-color: rgb(125, 156, 166); */
+    background-color: rgb(207, 234, 242);
+    border-color: rgb(58, 82, 89);
+    border-width: thin;
+}
+
+.btn-hover:hover {
+    color: white;
+}
+
+.link-image {
+    opacity: 0.50;
+}
+
+.link-image:hover {
+    opacity: 0.75;
 }

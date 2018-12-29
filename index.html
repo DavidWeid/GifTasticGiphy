@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8" />
-    <title>Gif-Tastic Giphy</title>
+    <title>Anime in Motion</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -20,16 +20,36 @@
       href="assets/style.css"
     />
   </head>
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100 bg-light">
     <!--Jumbotron Section-->
     <div role="heading">
       <section class="jumbotron text-center bg-lavender text-lavender">
         <div class="container">
-          <h1 class="jumbotron-heading">Theme Goes Here</h1>
-          <p class="lead text-lavender-muted">
-            Welcome text. Idea of this page. What and how to do.
+          <h1 class="jumbotron-heading">Anime in Motion</h1>
+          <p class="lead text-lavender-muted my-4">
+            Welcome to GifTastic-Anime. Click any of the buttons below to see
+            some awesome Anime gifs! If desired contribute to the list, but
+            either way enjoy these endless gifs!
           </p>
-          <p>Let's put a form here with a submit button</p>
+          <p>Got another Anime you want to look for?</p>
+          <form id="topic-form">
+            <div class="form-group">
+              <label for="topic-input"> Why not add it to the list </label>
+              <input
+                class="form-control col-md-4 text-center mx-auto mb-3"
+                type="text"
+                id="topic-input"
+                placeholder="Anime Title"
+              />
+              <button
+                class="btn bg-lavender-muted btn-hover"
+                id="add-topic"
+                type="submit"
+              >
+                Add Anime
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </div>
@@ -49,50 +69,24 @@
     <div role="main" class="flex-shrink-0">
       <div class="album py-5 bg-light">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4" id="cards-view">
-              <!--The actual Gif goes in this card-->
-              <div class="card mb-4 shadow-sm">
-                <img
-                  src="assets/images/blackPlaceholder.jpg"
-                  class="card-img-top"
-                  alt="placeholder"
-                />
-                <div class="card-body"><p class="card-text text-center">Gif info</p></div>
+          <div class="row" id="cards-view">
+            <!-- <div class="col-md-4">
+                The actual Gif goes in this card
+                <div class="card mb-4 shadow-sm">
+                  <img
+                    src="assets/images/blackPlaceholder.jpg"
+                    class="card-img-top"
+                    alt="placeholder"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Gif info</p>
+                  </div>
+                </div>
+                Gif Card End
               </div>
-              <!--Gif Card End-->
-            </div>
-            <!--Card Col End-->
-
-            <div class="col-md-4" id="cards-view">
-              <!--The actual Gif goes in this card-->
-              <div class="card mb-4 shadow-sm">
-                <img
-                  src="assets/images/blackPlaceholder.jpg"
-                  class="card-img-top"
-                  alt="placeholder"
-                />
-                <div class="card-body"><p class="card-text text-center">Gif info</p></div>
-              </div>
-              <!--Gif Card End-->
-            </div>
-            <!--Card Col End-->
-
-            <div class="col-md-4" id="cards-view">
-              <!--The actual Gif goes in this card-->
-              <div class="card mb-4 shadow-sm">
-                <img
-                  src="assets/images/blackPlaceholder.jpg"
-                  class="card-img-top"
-                  alt="placeholder"
-                />
-                <div class="card-body"><p class="card-text text-center">Gif info</p></div>
-              </div>
-              <!--Gif Card End-->
-            </div>
-            <!--Card Col End-->
+              Card Col End -->
           </div>
-          <!--Card Row End-->
+          <!-- Card Row End -->
         </div>
       </div>
     </div>
@@ -110,11 +104,12 @@
 
     <!--Google jQuery, BS jQuery, BS popper, BS js, my js links-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
       integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"

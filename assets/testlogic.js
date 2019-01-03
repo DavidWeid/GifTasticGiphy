@@ -82,7 +82,6 @@ function getRandomGifs() {
 
 // This function gets 12 gifs using the search query: 12 gifs are always the same (gives more meta data)
 function getThoseGifs() {
-  animeName = $(this).attr("data-name");
 
   console.log(animeName);
 
@@ -151,11 +150,19 @@ function getThoseGifs() {
   });
 }
 
+//
+function setTheStage() {
+    animeName = $(this).attr("data-name");
+    console.log(animeName);
+    getThoseGifs();
+}
+
 // Function to change offset number (used with getThoseGifs)
 function changeOffSet() {
+  offSetBy += 12;
   animeName = $(this).attr("data-name");
   console.log(animeName);
-  offSetBy += 12;
+  $(".more-button").empty();
   getThoseGifs();
 }
 
@@ -191,7 +198,7 @@ $("#add-topic").on("click", function(event) {
 
 // This allows the user to click a button to start the ajax call
 // Run either getThoseGifs (search query) or getRandomGifs (random query)
-$(document).on("click", ".ajax-btn", getThoseGifs);
+$(document).on("click", ".ajax-btn", setTheStage);
 // $(document).on("click", ".ajax-btn", getRandomGifs);
 
 // This allows the user to click gifs and change the state between still and animated

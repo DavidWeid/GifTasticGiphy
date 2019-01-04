@@ -1,73 +1,73 @@
 html,
 body {
-    height: 100%;
-    color: rgb(58, 82, 89);
+  height: 100%;
+  color: rgb(58, 82, 89);
 }
 
 a {
-    text-decoration: none;
-    color: rgb(245, 235, 99);
+  text-decoration: none;
+  color: rgb(245, 235, 99);
 }
 
 a:hover {
-    text-decoration: none;
-    color: rgb(58, 82, 89);
-    /* color: rgb(179, 152, 160); */
+  text-decoration: none;
+  color: rgb(58, 82, 89);
+  /* color: rgb(179, 152, 160); */
 }
 
 .jumbotron {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-bottom: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer p {
-    margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .bg-lavender {
-    background-color: rgb(125, 156, 166);
+  background-color: rgb(125, 156, 166);
 }
 
 .text-lavender {
-    color: rgb(242, 238, 170);
+  color: rgb(242, 238, 170);
 }
 
 .text-lavender-muted {
-    /* color: rgb(192, 187, 125); */
-    /* color: rgb(115, 112, 75); */
-    /* color: rgb(245, 235, 99); */
-    /* opacity: 0.70; */
-    color: rgb(58, 82, 89);
-    font-weight: 400;
+  /* color: rgb(192, 187, 125); */
+  /* color: rgb(115, 112, 75); */
+  /* color: rgb(245, 235, 99); */
+  /* opacity: 0.70; */
+  color: rgb(58, 82, 89);
+  font-weight: 400;
 }
 
 .text-lavender-muted:hover {
-    /* color: rgb(192, 187, 125); */
-    color: white;
+  /* color: rgb(192, 187, 125); */
+  color: white;
 }
 
 .bg-lavender-muted {
-    /* background-color: rgb(58, 82, 89); */
-    /* background-color: rgb(125, 156, 166); */
-    background-color: rgb(207, 234, 242);
-    border-color: rgb(58, 82, 89);
-    border-width: thin;
+  /* background-color: rgb(58, 82, 89); */
+  /* background-color: rgb(125, 156, 166); */
+  background-color: rgb(207, 234, 242);
+  border-color: rgb(58, 82, 89);
+  border-width: thin;
 }
 
 .btn-hover:hover {
-    color: white;
+  color: white;
 }
 
 .link-image {
-    opacity: 0.50;
+  opacity: 0.5;
 }
 
 .link-image:hover {
-    opacity: 0.75;
+  opacity: 0.75;
 }

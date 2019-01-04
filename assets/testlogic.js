@@ -5,8 +5,12 @@
 // Array to hold the topics (button choices)
 var topics = ["Pokemon", "Naruto", "One Piece", "Spirited Away", "Evangelion"];
 var animeName = "";
+
 // This variable holds the offset value for getThoseGifs (only for search query, not random query)
 var offSetBy = 0;
+
+// This variable holds the currently inactive button
+var currInactive = null;
 
 ///// Functions /////
 
@@ -14,13 +18,15 @@ var offSetBy = 0;
 function renderButtons() {
   $("#buttons-view").empty();
 
+  // data-name for the ajax call and id for the button active/inactive state
   for (var i = 0; i < topics.length; i++) {
     var newButton = $("<button>")
       .addClass(
         "btn mx-1 my-1 text-lavender-muted bg-lavender-muted btn-hover ajax-btn"
       )
       .text(topics[i])
-      .attr("data-name", topics[i]);
+      .attr("data-name", topics[i])
+      .attr("id", topics[i]);
     $("#buttons-view").append(newButton);
   }
 }
@@ -80,8 +86,13 @@ function getRandomGifs() {
   }
 }
 
-// This function gets 12 gifs using the search query: 12 gifs are always the same (gives more meta data)
+// This function gets 12 gifs using the search query: 12 gifs change based on the offset number (gives more meta data)
+// Gifs are displayed in a card-component: gif-image at the top of the card and gif-information at the bottom of the card
+// Three gifs are shown per line
+// Gifs are given attributes used to control the still / animated state
 function getThoseGifs() {
+  // Clear the "12 more" button if it exists when a topic button is clicked (vs the "12 more" button being clicked)
+  $(".more-button").empty();
 
   console.log(animeName);
 
@@ -136,6 +147,7 @@ function getThoseGifs() {
     }
 
     // This section adds a "12 more" button with the class click-for-more
+    // moreButtonDiv is centered and in its own row
     var moreButtonDiv = $("<div>").addClass(
       "row more-button mx-auto text-center"
     );
@@ -150,11 +162,32 @@ function getThoseGifs() {
   });
 }
 
-//
+// Function sets the current button inactive / reactivates last button
+function btnState() {
+  // For the second and beyond topic-button clicked
+  // Activate the previous button, set the current button to disabled
+  if (currInactive !== null) {
+    var lastButton = document.getElementById(currInactive);
+    console.log(lastButton);
+    $(lastButton).attr("disabled", false);
+    currInactive = $(this).attr("id");
+    $(this).attr("disabled", true);
+
+    // For the very first topic-button clicked
+    // Disable the first button and set it to currInactive (currInactive goes from null to the id of the clicked button)
+  } else if (currInactive === null) {
+    currInactive = $(this).attr("id");
+    console.log(currInactive);
+    $(this).attr("disabled", true);
+  }
+}
+
+// Function gets the name of the button clicked and routes to the ajax call
 function setTheStage() {
-    animeName = $(this).attr("data-name");
-    console.log(animeName);
-    getThoseGifs();
+  animeName = $(this).attr("data-name");
+  console.log(animeName);
+  getThoseGifs();
+  // $(lastButton).attr("disabled", true);
 }
 
 // Function to change offset number (used with getThoseGifs)
@@ -199,6 +232,7 @@ $("#add-topic").on("click", function(event) {
 // This allows the user to click a button to start the ajax call
 // Run either getThoseGifs (search query) or getRandomGifs (random query)
 $(document).on("click", ".ajax-btn", setTheStage);
+$(document).on("click", ".ajax-btn", btnState);
 // $(document).on("click", ".ajax-btn", getRandomGifs);
 
 // This allows the user to click gifs and change the state between still and animated

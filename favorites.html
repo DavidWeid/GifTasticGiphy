@@ -27,31 +27,10 @@
         <div class="container">
           <h1 class="jumbotron-heading">Anime in Motion</h1>
           <p class="lead text-lavender-muted my-4">
-            Welcome to GifTastic-Anime. Click any of the buttons below to see
-            some awesome Anime gifs!<br />
-            If desired contribute to the list, but either way enjoy these
-            endless gifs!
+            Welcome to GifTastic-Anime. Here are your favorited gifs!
           </p>
-          <p>Got another Anime you want to look for?</p>
-          <form id="topic-form">
-            <div class="form-group">
-              <label for="topic-input"> Why not add it to the list </label>
-              <input
-                class="form-control col-md-4 text-center mx-auto mb-3"
-                type="text"
-                id="topic-input"
-                placeholder="Anime Title"
-              />
-              <button
-                class="btn bg-lavender-muted btn-hover"
-                id="add-topic"
-                type="submit"
-              >
-                Add Anime
-              </button>
-              <button class="btn bg-lavender-muted btn-hover" id="fav-button" type="button" onclick="window.location.href='favorites.html'">Favorites</button>
-            </div>
-          </form>
+          <p>Save or remove your favorite gifs below! <br/> Or return home:</p>
+          <button class="btn bg-lavender-muted btn-hover" id="home-button" type="button" onclick="window.location.href='index.html'">Home</button>
         </div>
       </section>
     </div>
@@ -61,7 +40,10 @@
     <div role="group">
       <section class="text-center bg-light py-5">
         <div class="container">
-          <div id="buttons-view">Buttons dynamically created</div>
+          <div>
+              <p>Browse your saved gifs or delete them all!</p>
+              <button class="btn mx-1 my-1 text-lavender-muted bg-lavender-muted btn-hover" id="clear-btn">Clear All</button>
+          </div>
         </div>
       </section>
     </div>
@@ -71,7 +53,7 @@
     <div role="main" class="flex-shrink-0">
       <div class="album py-5 bg-light">
         <div class="container">
-          <div class="row" id="cards-view"></div>
+          <div class="row" id="fav-cards-view"></div>
           <!-- Card Row End -->
         </div>
       </div>
@@ -82,19 +64,16 @@
     <footer class="mt-auto bg-lavender text-lavender">
       <div class="container">
         <p class="float-right"><a href="#">To Top</a></p>
-        <p>Enjoy Anime in Motion! Special thanks to <a href="https://giphy.com" target="_blank">GIPHY</a></p>
+        <p>
+          Enjoy Anime in Motion! Special thanks to
+          <a href="https://giphy.com" target="_blank">GIPHY</a>
+        </p>
       </div>
     </footer>
     <!--Footer End-->
 
     <!--Google jQuery, BS jQuery, BS popper, BS js, my js links-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
       integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"

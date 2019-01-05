@@ -187,12 +187,14 @@ function setTheStage() {
   animeName = $(this).attr("data-name");
   console.log(animeName);
   getThoseGifs();
+  console.log(offSetBy);
   // $(lastButton).attr("disabled", true);
 }
 
 // Function to change offset number (used with getThoseGifs)
 function changeOffSet() {
   offSetBy += 12;
+  console.log(offSetBy);
   animeName = $(this).attr("data-name");
   console.log(animeName);
   $(".more-button").empty();
@@ -226,7 +228,8 @@ $("#add-topic").on("click", function(event) {
 
   renderButtons();
 
-  $("#topic-input").empty();
+  // $("#topic-input").empty();
+  $("#topic-input").val("");
 });
 
 // This allows the user to click a button to start the ajax call

@@ -72,12 +72,19 @@ function getRandomGifs() {
         .attr("data-toggle", "tooltip")
         .attr("title", "GIPHY");
 
+      var favToggle = $("<button>")
+        .addClass("btn")
+        .attr("data-toggle", "button")
+        .attr("aria-pressed", "false")
+        .attr("autocomplete", "off")
+        .text("A");
+
       var p = $("<p>")
         .addClass("card-text text-center")
         .html(results.title);
 
       $(link).append(linkImg);
-      $(cardBody).append(p, link);
+      $(cardBody).append(p, link, favToggle);
       $(cardDiv).append(imgDiv, cardBody);
       $(col4Div).append(cardDiv);
 
@@ -134,12 +141,19 @@ function getThoseGifs() {
         .attr("data-toggle", "tooltip")
         .attr("title", "GIPHY");
 
+      var favToggle = $("<button>")
+        .addClass("btn bg-lavender-muted float-right")
+        .attr("data-toggle", "button")
+        .attr("aria-pressed", "false")
+        .attr("autocomplete", "off")
+        .attr("data-gifId", results[j].id);
+
       var p = $("<p>")
         .addClass("card-text text-center")
         .html("Rating: " + "<h2>" + results[j].rating.toUpperCase() + "</h2>");
 
       $(link).append(linkImg);
-      $(cardBody).append(p, link);
+      $(cardBody).append(p, link, favToggle);
       $(cardDiv).append(imgDiv, cardBody);
       $(col4Div).append(cardDiv);
 

@@ -71,3 +71,7 @@ footer p {
 .link-image:hover {
   opacity: 0.75;
 }
+
+.active {
+  background-color: rgb(242, 238, 170);
+}
